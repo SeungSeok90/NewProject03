@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Admin Panel</title>
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+</head>
+
+<body>
+    <h1>Admin Panel</h1>
+    <h2>Registrations</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Company</th>
+                <th>Department</th>
+                <th>Position</th>
+                <th>Consent</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% registrations.forEach(function(registration) { %>
+                <tr>
+                    <td>
+                        <%= registration.name %>
+                    </td>
+                    <td>
+                        <%= registration.email %>
+                    </td>
+                    <td>
+                        <%= registration.phone %>
+                    </td>
+                    <td>
+                        <%= registration.company %>
+                    </td>
+                    <td>
+                        <%= registration.department %>
+                    </td>
+                    <td>
+                        <%= registration.position %>
+                    </td>
+                    <td>
+                        <%= registration.consent ? 'Yes' : 'No' %>
+                    </td>
+                </tr>
+                <% }); %>
+        </tbody>
+    </table>
+    <a href="/admin/export">Export to Excel</a>
+</body>
+
+</html>
