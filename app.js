@@ -27,6 +27,6 @@ const adminRoutes = require('./routes/admin');
 app.use('/', indexRoutes);
 app.use('/admin', adminRoutes);
 
-app.listen(3000, function () {
-    console.log('Server is running on port 3000');
+app.listen(80, function () {
+    console.log('Server is running on port 80');
 });
